@@ -16,7 +16,7 @@ const apiFullPage = new fullpage('#fullpage',{
         if(origin.index == 2){
 			
 		}
-    }    
+    },
     
 
 });

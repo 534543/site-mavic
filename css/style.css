@@ -1991,6 +1991,19 @@ footer {
   }
 }
 
+@media (max-width: 500px) {
+  .page__section__title h2 {
+    font-size: 40px;
+  }
+
+  .page__section__colums__item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 @media (max-width: 482px) {
   .swiper-container .swiper-button-next {
     top: 331px;
@@ -1999,12 +2012,24 @@ footer {
 
   .swiper-container .swiper-button-prev {
     top: 331px;
-    left: 342px;
+    -webkit-transform: translate(-50%, 0px);
+        -ms-transform: translate(-50%, 0px);
+            transform: translate(-50%, 0px);
   }
 
   .swiper-wrapper {
     max-width: 300px;
     padding: 70px 0px;
+  }
+}
+
+@media (max-width: 468px) {
+  .page__section__slider__title {
+    left: 100px;
+  }
+
+  .page__section__title h2 {
+    font-size: 36px;
   }
 }
 
@@ -2019,6 +2044,46 @@ footer {
 
   .accordion__control .accordion__title {
     padding: 5px 30px;
+  }
+}
+
+@media (max-width: 438px) {
+  .page__section__slider__title {
+    left: 70px;
+    top: -255px;
+  }
+}
+
+@media (max-width: 410px) {
+  .page__section__slider__title {
+    left: 35px;
+    top: -252px;
+  }
+
+  .page__section__title h2 {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 375px) {
+  .page__section__slider__title {
+    left: 15px;
+    top: -235px;
+  }
+
+  .page__section__title h2 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 358px) {
+  .page__section__slider__title {
+    left: 0px;
+    top: -220px;
+  }
+
+  .page__section__title h2 {
+    font-size: 28px;
   }
 }
 
@@ -2233,6 +2298,14 @@ footer {
 
 }
 
+ @media (max-width: 500px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
  @media (max-width: 482px){
 
 @supports (-webkit-appearance:none){
@@ -2241,7 +2314,47 @@ footer {
 
 }
 
+ @media (max-width: 468px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
  @media (max-width: 450px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media (max-width: 438px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media (max-width: 410px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media (max-width: 375px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media (max-width: 358px){
 
 @supports (-webkit-appearance:none){
 
