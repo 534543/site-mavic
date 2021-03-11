@@ -8,22 +8,17 @@ let rellax = new Rellax('.rellax',{
 
 
 const apiFullPage = new fullpage('#fullpage',{
-   
     scrollOverflow: true,
-    resize: false,
-    scrollingSpeed: 800,
-    scrollHorizontally: true,
-   
+    afterLoad: function(origin){
 
-    afterLoad: function resizePage(){
-        
         const screenWidth = window.screen.width;
+        
+        if(origin.index == 2){
+			
+		}
+    }    
+    
 
-        if(screenWidth < 900){
-          
-          
-        }
-    }
 });
 
 
