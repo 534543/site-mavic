@@ -1,15 +1,15 @@
 
 
 new fullpage('#fullpage',{
-    scrollHorizontally: true,
+
     scrollOverflow: true,
     anchors: ['page__section__top','page__section__who','page__section__characteristics','page__section__advantages','page__section__question','page__section__content__contact'],
     menu: '#myMenu',
-    responsiveWidth: 767,
-    navigation: true,
-   
+    //responsiveWidth: 960,
+    //navigation: true,
+    
 });
-
+fullpage_api.setAllowScrolling(false);
 function pageScrollOverflow() {
     const screenWidth = window.screen.width;
 
