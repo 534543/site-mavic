@@ -9,7 +9,7 @@ new fullpage('#fullpage',{
     //navigation: true,
     
 });
-fullpage_api.setAllowScrolling(false);
+fullpage_api.setMouseWheelScrolling(false);
 function pageScrollOverflow() {
     const screenWidth = window.screen.width;
 
