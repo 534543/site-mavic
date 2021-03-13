@@ -1,27 +1,25 @@
-function email_test(input) {
-	return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
-}
-let rellax = new Rellax('.rellax',{
-    horizontal:true
-    
-});
 
 
-const apiFullPage = new fullpage('#fullpage',{
+new fullpage('#fullpage',{
+    scrollHorizontally: true,
     scrollOverflow: true,
-    afterLoad: function(origin){
-
-        const screenWidth = window.screen.width;
-        
-        if(origin.index == 2){
-			
-		}
-    },
-    
-
+    anchors: ['page__section__top','page__section__who','page__section__characteristics','page__section__advantages','page__section__question','page__section__content__contact'],
+    menu: '#myMenu',
+    responsiveWidth: 767,
+    navigation: true,
+   
 });
 
+function pageScrollOverflow() {
+    const screenWidth = window.screen.width;
 
+    if(screenWidth < 768){
+
+        //fullpage_api.setResponsive(true);
+
+    }
+}
+pageScrollOverflow();
 
 
 document.querySelector('.header_burger').addEventListener('click',function(){
@@ -32,7 +30,6 @@ document.querySelector('.header_burger').addEventListener('click',function(){
 
 document.addEventListener('DOMContentLoaded', ()=>{
     const accordions = document.querySelectorAll('.accordion');
-
     accordions.forEach((el)=>{
         el.addEventListener('click', (e)=>{
 
@@ -54,6 +51,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
             content.setAttribute('aria-hidden',true);
             content.style.maxHeight = null;
            }
+
         })
     })
 })
@@ -176,57 +174,7 @@ function setScrollType(){
 
 
 
-const animItems = document.querySelectorAll('._anim-items');
 
-if( animItems.length > 0){
-    window.addEventListener('scroll',animOnScroll);
-    function animOnScroll() {
-        for (let index = 0; index < animItems.length; index++) {
-            const animItem = animItems[index];
-            const animHeight = animItem.offsetHeight;
-            const animItemOffset = offset(animItem).top;
-            const animStart = 4;
-
-
-            let animItemPoint = window.innerHeight - animHeight / animStart;
-
-            if(animHeight > window.innerHeight){
-                animItemPoint = window.innerHeight - window.innerHeight / animStart;
-            }
-
-            if( (pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animHeight)){
-                animItem.classList.add('_active');
-            }else{
-                //animItem.classList.remove('_active');
-            }
-            
-        }
-    }
-    function offset(el) {
-        const rect = el.getBoundingClientRect(),
-        scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
-        scrollTop  = window.pageYOffset || document.documentElement.scrollTop;
-        return{ top: rect.top + scrollTop, left: rect.left + scrollLeft}
-    }
-
-    
-    
-    setTimeout(() =>{
-        animOnScroll();
-    },500)
-}
-
-const windowWidth = window.innerWidth;
-
-if(windowWidth < 768){
-    
-   let removeClassItems = document.querySelector('.page');
-   console.log(removeClassItems.querySelectorAll('._anim-items'));
-   //removeClassItems.forEach(el => {
-    //el.classList.remove("_active");
-    
-   //})
-}
 //BildSlider
 let sliders = document.querySelectorAll('._swiper');
 if (sliders) {
