@@ -1,5 +1,7 @@
 
 
+
+
 new fullpage('#fullpage',{
 
     scrollOverflow: true,
@@ -7,9 +9,10 @@ new fullpage('#fullpage',{
     menu: '#myMenu',
     //responsiveWidth: 960,
     //navigation: true,
+
     
 });
-fullpage_api.setMouseWheelScrolling(false);
+
 function pageScrollOverflow() {
     const screenWidth = window.screen.width;
 
@@ -19,7 +22,11 @@ function pageScrollOverflow() {
 
     }
 }
+
 pageScrollOverflow();
+
+
+
 
 
 document.querySelector('.header_burger').addEventListener('click',function(){
